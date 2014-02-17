@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#sky").hover(
+					function () {
+						$("#sky").addClass("focused");
+					},
+					function () {
+						$("#sky").removeClass("focused");
+					}
+				
+				);
+			});
+		</script>
+		<style>
+			body
+			{
+				width:300px;
+				padding:0;
+				margin:0 auto;
+				font-family:arial;
+			}
+			.shade
+			{
+				padding:0 20px 30px;
+				border:1px #eef solid;
+				text-align:center;
+				margin:100px 0 0;
+				font-size:200%;
+				text-shadow: -1.5em 0.5em 0.1em #600;
+				
+			}
+			.shade:hover
+			{
+				-moz-animation:mymove 1s; /* Firefox */
+				text-shadow: 1.5em 0.5em 0.1em #600;
+			}
+			@-moz-keyframes mymove /* Firefox */
+			{
+				0%   {text-shadow: -1.5em 0.5em 0.1em #600;}
+				25%   {text-shadow: -1em 0.75em 0.1em #600;}
+				50%  {text-shadow: 0em 1em 0.1em #600;}
+				75%   {text-shadow: 1em 0.75em 0.1em #600;}
+				100% {text-shadow: 1.5em 0.5em 0.1em #600;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shade">
+			SHADOW
+		</div>
+	</body>
+</html>

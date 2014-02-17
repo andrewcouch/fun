@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#sky ul li").hover(
+					function () {
+						$("#sky").addClass("focused");
+					},
+					function () {
+						$("#sky").removeClass("focused");
+					}
+				
+				);
+			});
+		</script>
+		<style>
+			body
+			{
+				width:810px;
+				padding:0;
+				margin:0 auto;
+				font-family:arial;
+			}
+			#sky
+			{
+				background:black;
+				height:150px;
+				overflow:hidden;
+				position:relative;
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;				
+				background-image: -webkit-linear-gradient(160deg, #000 60%, #33338E 100%);  
+				background-image: -moz-linear-gradient(160deg, #000 60%, #33338E 100%);  
+				background-image: -ms-linear-gradient(160deg, #000 60%, #33338E 100%);  
+				background-image: -o-linear-gradient(160deg, #000 60%, #33338E 100%);  
+				background-image: linear-gradient(160deg, #000 60%, #33338E 100%);  					
+			}
+			#sky ul
+			{
+				position:absolute;
+				bottom:0;
+				right:0;
+				margin:0;
+				padding:0;
+		
+			}
+			#sky ul li
+			{
+				float:left;
+				margin-left:5px;
+				list-style:none;
+				position:relative;
+			}
+			#sky ul li span
+			{
+				padding:5px 20px;
+				-webkit-border-top-left-radius: 5px;
+				-moz-border-top-left-radius: 5px;
+				border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-top-right-radius: 5px;
+				border-top-right-radius: 5px;	
+				border:1px solid white;	
+				border-bottom:none;
+				background:black;
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;				
+				color:white;
+				position:relative;
+				z-index:11;
+			}
+
+			.sun 
+			{
+				height:1px;
+				width:1px;
+				padding:20px;
+				-webkit-border-radius: 20px;
+				-moz-border-radius: 20px;
+				border-radius: 20px;
+				background:yellow;
+				position:absolute;
+				bottom:-41px;
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				z-index:10;
+				left:20px;
+			}
+			#sky ul li:hover span
+			{
+				background:white;
+				color:black;
+			}
+			#sky ul li:hover .sun 
+			{
+				bottom:100px;
+				box-shadow: 0px 0px 100px 50px #FFFFDB;
+			}
+			
+			#sky.focused
+			{
+				background:#99CCFF;
+				background-image: -webkit-linear-gradient(60deg, #33338E 0%, #99CCFF 100%);  
+				background-image: -moz-linear-gradient(60deg, #33338E 0%, #99CCFF 100%);  
+				background-image: -ms-linear-gradient(60deg, #33338E 0%, #99CCFF 100%);  
+				background-image: -o-linear-gradient(60deg, #33338E 0%, #99CCFF 100%);  
+				background-image: linear-gradient(60deg, #33338E 0%, #99CCFF 100%);  
+			}
+			div.gradian
+			{
+				background-image: linear-gradient(45deg, #FF5A00, #FFAE00);  
+				height:100px;
+				width:100px;
+			}
+			#logo
+			{
+				background: url('img/stars.png') top left no-repeat;
+				height:150px;
+				width:400px;
+				float:left;
+				margin-left: 25px;
+			}
+			#logo h1 a
+			{
+				text-decoration:none;
+				color:white;
+				font-weight:normal;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sky">
+			<div id="logo">
+				<h1><a href="/">Blog of the Sun<a></h1>
+			</div>
+			<ul>
+				<li><span>About</span>
+					<div class="sun"></div>
+				</li>
+				<li><span>Blog</span>
+					<div class="sun"></div>
+				</li>
+				<li><span>Contact</span>
+					<div class="sun"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="gradian">
+		</div>
+	</body>
+</html>

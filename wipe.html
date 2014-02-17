@@ -1,0 +1,57 @@
+<html>
+<head>
+	<style>
+		.stage
+		{
+			width:718px;
+			height:538px;
+			position:relative;
+		}
+		.stage img
+		{
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		.stage div
+		{
+			z-index:0;
+			width:350px;
+			height:100%;
+			-webkit-transition: width 2s ease-in;
+			-moz-transition: width 2s ease-in;
+			-o-transition: width 2s ease-int;
+			transition: width 2s ease-in;
+			position:absolute;
+		}
+		.stage .first
+		{
+			left:0px;
+			width:100%;
+			background:url('img/valencia.JPG') left;
+		}
+		.stage .second
+		{
+			left:0px;
+			width:0%;
+			background:url('img/brussels.JPG') left;
+		}
+
+		.stage:hover .second
+		{
+			width:100%;
+			z-index:10;
+			border-right:20px black solid;
+		}
+	</style>
+</head>
+<body>
+	<div class="stage">
+		<div class="first">
+		</div>
+		<div class="second">
+
+		</div>
+	</div>
+</body>
+</html>

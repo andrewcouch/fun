@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#sky").hover(
+					function () {
+						$("#sky").addClass("focused");
+					},
+					function () {
+						$("#sky").removeClass("focused");
+					}
+				
+				);
+			});
+		</script>
+		<style>
+			body
+			{
+				width:810px;
+				padding:0;
+				margin:100px auto;
+				font-family:arial;
+				background:black;
+			}
+			.shade
+			{
+				text-align:center;
+				font-size:200%;
+				text-shadow:  0 0 0.05em #666;
+				
+			}
+			.green
+			{
+				color:#00FF00;
+			}
+			.red
+			{
+				color:#FF0000;
+			}
+			.blue
+			{
+				color:#0000FF;
+			}
+			.shade:hover .green
+			{
+				color:white;
+				text-shadow:  0 0 0.05em #FFFFFF,0 0 0.1em #66dd66, 0 0 0.2em #00dd00, 0 0 0.6em #00dd00, 0 0 0.8em #00dd00, 0 0 1em #00dd00;
+			}
+			.shade:hover .red
+			{
+				color:white;
+				text-shadow:  0 0 0.05em #FFFFFF,0 0 0.1em #FF6666, 0 0 0.2em #FF0000, 0 0 0.6em #FF0000, 0 0 0.8em #FF0000, 0 0 1em #FF0000;
+			}
+			.shade:hover .blue
+			{
+				color:white;
+				text-shadow:  0 0 0.05em #FFFFFF,0 0 0.1em #6666FF, 0 0 0.2em #0000FF, 0 0 0.6em #0000FF, 0 0 0.8em #0000FF, 0 0 1em #0000FF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shade">
+			<span class="green">NEON</span> <span class="red">NEON</span> <span class="blue">NEON</span>
+		</div>
+	</body>
+</html>
