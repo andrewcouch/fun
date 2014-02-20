@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			body
+			{
+				width:300px;
+				padding:0;
+				margin:0 auto;
+				font-family:arial;
+			}
+			.card
+			{
+				padding:10px;
+				height:300px;
+				width:200px;
+				background:#eef;
+				border:1px black solid;
+				text-align:center;
+				margin:100px 0 0;
+				box-shadow: 3px 3px 5px 0px #660000;
+				border-radius: 5px;
+				
+			}
+			.card:hover
+			{
+				-moz-animation:mymove 0.5s; /* Firefox */
+				box-shadow: 3px 3px 5px 0px #660000;
+			}
+			@-moz-keyframes mymove /* Firefox */
+			{
+				0%   {box-shadow: 3px 3px 5px 0px #660000;margin:100px 0 0;}
+				50%  {box-shadow: 23px 23px 9px 2px #600000;margin:80px 0 0;}
+				100% {box-shadow: 3px 3px 5px 0px #660000;margin:100px 0 0;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			Card Div
+		</div>
+	</body>
+</html>
